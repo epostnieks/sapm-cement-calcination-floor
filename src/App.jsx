@@ -387,9 +387,6 @@ export default function Cement7aCalcinationFloorDashboard() {
           </div>
         )}
 
-          </div>
-        )}
-
         {/* THRESHOLDS TAB */}
         {tab === 'thresholds' && (
           <div>
