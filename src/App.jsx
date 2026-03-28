@@ -12,8 +12,8 @@ import { BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, R
 const META = {
   title: "The Calcination Floor",
   subtitle: "§7a Cement SAPM — A New Impossibility Theorem",
-  beta: "≥1.35",
-  ci: "",
+  beta: "6.55",
+  ci: "5.50–7.73",
   pi: "$13.5B",
   psa: "-$18.2B/yr",
   mu: "0.7407 (74.1%)",
@@ -67,23 +67,24 @@ const HIGHLIGHTS = [
         "A3 confirmed: ICC astroturfing (ProPublica 2021), €5B EU ETS windfall, Brimstone DOE grant cancellation — institutional lock-in operating on three simultaneous tracks.",
 ];
 
-const PSF_PARAMS = {pi_c:55.8,pi_p:340.0,w_c:510.0,kappa:0.82};
-const PSF_DATA = [{pi:5.58,w:496.94},{pi:23.04,w:504.44},{pi:40.49,w:508.79},{pi:57.95,w:509.98},{pi:75.41,w:508.01},{pi:92.86,w:502.89},{pi:110.32,w:494.61},{pi:127.78,w:483.17},{pi:145.23,w:468.59},{pi:162.69,w:450.84},{pi:180.15,w:429.94},{pi:197.6,w:405.89},{pi:215.06,w:378.67},{pi:232.52,w:348.3},{pi:249.98,w:314.77},{pi:267.43,w:278.11},{pi:284.89,w:238.26},{pi:302.35,w:195.26},{pi:319.8,w:149.14},{pi:337.26,w:99.82},{pi:354.72,w:47.36},{pi:372.17,w:-8.23},{pi:389.63,w:-67.01},{pi:407.09,w:-128.95},{pi:424.54,w:-194.01},{pi:442.0,w:-262.25}];
+const PSF_PARAMS = {pi_c:85.0,pi_p:330.0,w_c:2014.0,kappa:1.35};
+const PSF_DATA = [{pi:8.5,w:1748.92},{pi:22.52,w:1837.18},{pi:36.53,w:1907.58},{pi:50.55,w:1960.24},{pi:64.57,w:1995.09},{pi:78.58,w:2012.13},{pi:92.6,w:2011.38},{pi:106.62,w:1992.83},{pi:120.63,w:1956.5},{pi:134.65,w:1902.34},{pi:148.67,w:1830.38},{pi:162.68,w:1740.67},{pi:176.7,w:1633.11},{pi:190.72,w:1507.74},{pi:204.73,w:1364.67},{pi:218.75,w:1203.69},{pi:232.77,w:1024.92},{pi:246.78,w:828.47},{pi:260.8,w:614.09},{pi:274.82,w:381.91},{pi:288.83,w:132.1},{pi:302.85,w:-135.69},{pi:316.87,w:-421.29},{pi:330.88,w:-724.47},{pi:344.9,w:-1045.66},{pi:358.92,w:-1384.67},{pi:372.93,w:-1741.22},{pi:386.95,w:-2115.82},{pi:400.97,w:-2508.23},{pi:414.98,w:-2918.15},{pi:429.0,w:-3346.16}];
 
-const MC_PARAMS = {n_draws:10000,mean:6.1,ci_lo:4.3,ci_hi:8.6,pct_hw:97.2,channels:[{name:"Process CO₂ from CaCO₃ calcination",dist:"log-normal",lo:2.8,hi:4.2},{name:"Thermal energy CO₂ (kiln heating)",dist:"triangular",lo:1.0,hi:2.0},{name:"Particulate and NOx health costs",dist:"log-normal",lo:0.2,hi:0.8},{name:"Limestone quarrying ecosystem costs",dist:"uniform",lo:0.1,hi:0.5}]};
-const MC_DATA = [{bin:"1.8",count:4},{bin:"2.2",count:14},{bin:"2.7",count:39},{bin:"3.1",count:93},{bin:"3.6",count:195},{bin:"4.0",count:361},{bin:"4.5",count:590},{bin:"5.0",count:852},{bin:"5.4",count:1089},{bin:"5.9",count:1231},{bin:"6.3",count:1231},{bin:"6.8",count:1089},{bin:"7.2",count:852},{bin:"7.7",count:590},{bin:"8.2",count:361},{bin:"8.6",count:195},{bin:"9.1",count:93},{bin:"9.5",count:39},{bin:"10.0",count:14},{bin:"10.4",count:4}];
+const MC_HIST = [{bin:"5.16",lo:5.1564,hi:5.2183,count:31},{bin:"5.22",lo:5.2183,hi:5.2801,count:44},{bin:"5.28",lo:5.2801,hi:5.3420,count:61},{bin:"5.34",lo:5.3420,hi:5.4039,count:100},{bin:"5.40",lo:5.4039,hi:5.4658,count:112},{bin:"5.47",lo:5.4658,hi:5.5276,count:168},{bin:"5.53",lo:5.5276,hi:5.5895,count:175},{bin:"5.59",lo:5.5895,hi:5.6514,count:192},{bin:"5.65",lo:5.6514,hi:5.7133,count:210},{bin:"5.71",lo:5.7133,hi:5.7752,count:240},{bin:"5.78",lo:5.7752,hi:5.8370,count:243},{bin:"5.84",lo:5.8370,hi:5.8989,count:264},{bin:"5.90",lo:5.8989,hi:5.9608,count:308},{bin:"5.96",lo:5.9608,hi:6.0227,count:294},{bin:"6.02",lo:6.0227,hi:6.0845,count:310},{bin:"6.08",lo:6.0845,hi:6.1464,count:338},{bin:"6.15",lo:6.1464,hi:6.2083,count:340},{bin:"6.21",lo:6.2083,hi:6.2702,count:326},{bin:"6.27",lo:6.2702,hi:6.3321,count:300},{bin:"6.33",lo:6.3321,hi:6.3939,count:346},{bin:"6.39",lo:6.3939,hi:6.4558,count:323},{bin:"6.46",lo:6.4558,hi:6.5177,count:302},{bin:"6.52",lo:6.5177,hi:6.5796,count:310},{bin:"6.58",lo:6.5796,hi:6.6414,count:307},{bin:"6.64",lo:6.6414,hi:6.7033,count:310},{bin:"6.70",lo:6.7033,hi:6.7652,count:287},{bin:"6.77",lo:6.7652,hi:6.8271,count:318},{bin:"6.83",lo:6.8271,hi:6.8890,count:288},{bin:"6.89",lo:6.8890,hi:6.9508,count:296},{bin:"6.95",lo:6.9508,hi:7.0127,count:263},{bin:"7.01",lo:7.0127,hi:7.0746,count:200},{bin:"7.07",lo:7.0746,hi:7.1365,count:232},{bin:"7.14",lo:7.1365,hi:7.1983,count:217},{bin:"7.20",lo:7.1983,hi:7.2602,count:237},{bin:"7.26",lo:7.2602,hi:7.3221,count:209},{bin:"7.32",lo:7.3221,hi:7.3840,count:173},{bin:"7.38",lo:7.3840,hi:7.4459,count:163},{bin:"7.45",lo:7.4459,hi:7.5077,count:159},{bin:"7.51",lo:7.5077,hi:7.5696,count:136},{bin:"7.57",lo:7.5696,hi:7.6315,count:128},{bin:"7.63",lo:7.6315,hi:7.6934,count:127},{bin:"7.69",lo:7.6934,hi:7.7553,count:104},{bin:"7.76",lo:7.7553,hi:7.8171,count:90},{bin:"7.82",lo:7.8171,hi:7.8790,count:56},{bin:"7.88",lo:7.8790,hi:7.9409,count:64},{bin:"7.94",lo:7.9409,hi:8.0028,count:63},{bin:"8.00",lo:8.0028,hi:8.0646,count:44},{bin:"8.06",lo:8.0646,hi:8.1265,count:42},{bin:"8.13",lo:8.1265,hi:8.1884,count:27},{bin:"8.19",lo:8.1884,hi:8.2503,count:23}];
+const MC_STATS = {mean:6.5463,median:6.5020,ci_lo:5.5049,ci_hi:7.7313,pct_hw:100.0,pct_above_3:100.0,pct_above_5:99.9,min:4.7070,max:8.8084,n_draws:10000,seed:42};
+const MC_CHANNELS = [{name:"Calcination CO2 (process)",mean:1222.57,p5:1056.62,p50:1218.54,p95:1394.84,share:0.5702},{name:"Combustion CO2 (energy)",mean:546.70,p5:460.38,p50:545.10,p95:637.50,share:0.2550},{name:"Air quality mortality",mean:196.68,p5:143.70,p50:194.67,p95:253.16,share:0.0917},{name:"Quarrying ecosystem",mean:79.93,p5:44.10,p50:80.21,p95:115.85,share:0.0373},{name:"NOx & particulate health",mean:58.14,p5:38.43,p50:57.29,p95:79.88,share:0.0271},{name:"Governance failure",mean:40.07,p5:17.46,p50:40.35,p95:62.56,share:0.0187}];
+const MC_WELFARE = {mean:2144.09,ci_lo:1948.11,ci_hi:2348.00};
 
-const THRESHOLDS = [{domain:"CaCO₃ → CaO + CO₂ thermodynamic floor",year:1824,status:"Portland cement chemistry requires calcination at 1450°C; process emissions of 0.53 tCO₂/t clinker are stoichiometric and irreducible (IEA Cement Roadmap 2018)",confidence:"High",crossed:true},{domain:"CCS retrofit economic viability",year:2035,status:"Only 1 operational cement CCS facility globally (Brevik, Norway, 0.4 Mt/yr); cost penalty $50–100/t cement vs. $10–20/t current margin",confidence:"Low",crossed:false},{domain:"EU CBAM cement inclusion",year:2026,status:"EU CBAM reporting phase began Oct 2023; full implementation for cement 2026; prices ~€90/tCO₂ as of 2024",confidence:"High",crossed:false},{domain:"Alternative binder commercial scale",year:2040,status:"LC3 (limestone calcined clay) reduces clinker by 50% but retains calcination; Solidia, BioMason remain pre-commercial",confidence:"Very Low",crossed:false}];
+const THRESHOLDS = [{domain:"Clinker-to-cement ratio below 0.65 globally",year:2030,confidence:"Medium",status:"Currently ~0.72; SCM substitution advancing in emerging markets",crossed:false},{domain:"First commercial CCS cement plant >1Mt/yr",year:2028,confidence:"Medium",status:"Heidelberg Materials Brevik (Norway) targeting 2024 startup",crossed:false},{domain:"Calcium silicate cement >1% global clinker share",year:2035,confidence:"Low",status:"Brimstone first plant ~103K-140K tonnes; 0.003% of global output",crossed:false},{domain:"Carbon price >$100/tCO2 in all major cement markets",year:2032,confidence:"Low",status:"EU ETS ~€65; China ETS ~$10; U.S. no federal price",crossed:false},{domain:"DOE Brimstone grant reinstatement or equivalent",year:2027,confidence:"Low",status:"Grant cancelled May 2025; administration reversal required",crossed:false}];
 
-const AXIOMS = {type:"impossibility",items:[{id:"A1",name:"Calcination Stoichiometry",description:"Portland cement requires CaCO₃ → CaO + CO₂ at 900°C; 60% of cement CO₂ is process emissions from this reaction, not fuel combustion. This is a chemical identity, not an engineering limitation — no catalyst or efficiency gain can eliminate it."},{id:"A2",name:"Thermodynamic Minimum Energy",description:"Clinker formation requires minimum 1.76 GJ/t from the endothermic calcination reaction plus 0.5 GJ/t for sintering at 1450°C. Current best-practice 3.1 GJ/t is within 40% of thermodynamic floor (IEA 2018)."},{id:"A3",name:"Scale Irreducibility",description:"4.1 Gt cement produced annually (USGS 2024); no alternative binder (geopolymer, MOC, Solidia) has exceeded 0.01% market share. Concrete is the second most consumed substance on Earth after water — 2.8 Gt CO₂/yr (8% of global emissions) has no material substitute at scale."}]};
+const AXIOMS = {type:"impossibility",items:[{id:"A1",name:"Calcination Necessity",description:"Portland cement clinker requires CaCO3 (limestone) as its primary feedstock; no demonstrated alternative feedstock produces equivalent binding properties at commercial scale."},{id:"A2",name:"Stoichiometric Irreducibility",description:"CaCO3 → CaO + CO2 is a conservation-of-mass identity: 100 kg of limestone yields 56 kg of lime and 44 kg of CO2. No process chemistry can eliminate this CO2 while preserving the CaO product."},{id:"A3",name:"Institutional Lock-in",description:"The $330B global cement industry\'s infrastructure, supply chains, and capital stock are configured for limestone-based production; sovereign regulatory action cancelled the primary alternative funding stream (DOE Brimstone grant, May 2025)."}]};
 
 const METHODS_DATA = {
-  welfare_function: "W = −[SCC × Process_CO₂ + SCC × Thermal_CO₂ + Health_costs]. At SCC = $185/tCO₂ and 2.8 GtCO₂/yr, cement’s unpriced climate damage = $518B/yr. Process emissions (1.47 GtCO₂) represent an irreducible floor of $272B/yr.",
-  cooperative_baseline: "Demand reduction via material efficiency (30–40% possible per IEA), maximum clinker substitution (LC3 at 50%), and CCS on remaining process emissions; cooperative Π_C = $55.8B reflects industry at full social cost internalization with demand rationalization.",
-  falsification: ["If a non-calcination binder achieves >5% global market share within 15 years, impossibility classification should be revisited.","If CCS achieves <$30/tCO₂ capture cost at cement plants, the economic floor shifts even if chemical floor remains.","If Monte Carlo robustness for β_W > 1 falls below 80%, point estimate is unreliable.","If electrochemical cement production eliminates calcination step at scale, the stoichiometric constraint is bypassed."],
-  key_sources: ["IEA (2018). Technology Roadmap: Low-Carbon Transition in the Cement Industry. IEA/CSI.","USGS (2024). Mineral Commodity Summaries: Cement. U.S. Geological Survey.","Lehne, J. & Preston, F. (2018). Making Concrete Change: Innovation in Low-carbon Cement and Concrete. Chatham House.","Scrivener, K. et al. (2018). Calcined clay limestone cements (LC3). Cement and Concrete Research 114.","Andrew, R.M. (2019). Global CO₂ emissions from cement production 1928–2018. Earth System Science Data 11."]
+  welfare_function: "W computed via Social Cost of Carbon ($190/tCO2) applied to 2.6 GtCO2/year process emissions plus 1.1 GtCO2 combustion emissions, plus VSL-weighted mortality from PM2.5 and NOx from cement kilns.",
+  cooperative_baseline: "Cement production under full CCS for process emissions plus electrified kilns, retaining $85B in essential construction material value with net-zero CO2 impact.",
+  falsification: ["F1: Demonstrate that calcium silicate cement (Brimstone process) achieves ASTM C150 compliance at >1% of global clinker output, establishing commercial-scale A1 escape.","F2: Show that CaCO3 calcination can produce binding CaO without releasing stoichiometric CO2 — i.e., refute A2 via novel process chemistry.","F3: Demonstrate that supplementary cementitious materials (fly ash, slag, calcined clay) can fully replace Portland clinker in all structural applications without strength or durability penalty."],
+  key_sources: ["IEA, Cement sector tracking (2024)","IPCC AR6 WG3, Industry chapter (2022)","Brimstone Energy technical specifications (2024)","Global Cement and Concrete Association, Getting the Numbers Right (2023)"]
 };
-
 
 // ─── Color palette ───────────────────────────────────────────────────────────
 const C = {
@@ -334,51 +335,58 @@ export default function Cement7aCalcinationFloorDashboard() {
             </div>
           </div>
         )}
-
         {/* MONTE CARLO TAB */}
         {tab === 'monte-carlo' && (
           <div>
-            <SectionTitle>Monte Carlo Robustness — {MC_PARAMS.n_draws.toLocaleString()} Draws</SectionTitle>
+            <SectionTitle>Monte Carlo Simulation — {MC_STATS.n_draws.toLocaleString()} Draws (seed={MC_STATS.seed})</SectionTitle>
             <div style={{background:C.panel,border:`1px solid ${C.border}`,borderRadius:4,padding:16,marginBottom:16}}>
-              <ResponsiveContainer width="100%" height={280}>
-                <BarChart data={MC_DATA} margin={{top:10,right:30,left:20,bottom:10}}>
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={MC_HIST} margin={{top:10,right:30,left:20,bottom:30}}>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
-                  <XAxis dataKey="bin" stroke={C.muted} tick={{fontFamily:C.mono,fontSize:10}} />
+                  <XAxis dataKey="bin" stroke={C.muted} tick={{fontFamily:C.mono,fontSize:9}} angle={-45} textAnchor="end" interval={4} />
                   <YAxis stroke={C.muted} tick={{fontFamily:C.mono,fontSize:11}} />
-                  <Tooltip contentStyle={{background:C.panel,border:`1px solid ${C.border}`,fontFamily:C.mono,fontSize:12,color:C.text}} />
+                  <Tooltip contentStyle={{background:C.panel,border:`1px solid ${C.border}`,fontFamily:C.mono,fontSize:12,color:C.text}} formatter={(v)=>[v,'Draws']} />
                   <Bar dataKey="count" fill={C.gold} />
-                  <ReferenceLine x={MC_PARAMS.mean.toFixed(1)} stroke={C.crimson} strokeDasharray="5 5" label={{value:'β̄='+MC_PARAMS.mean,fill:C.crimson,fontFamily:C.mono,fontSize:11}} />
+                  <ReferenceLine x={MC_STATS.mean.toFixed(2)} stroke={C.crimson} strokeWidth={2} strokeDasharray="5 5" label={{value:'μ='+MC_STATS.mean.toFixed(2),fill:C.crimson,fontFamily:C.mono,fontSize:11,position:'top'}} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
             <div style={{display:'flex',gap:12,flexWrap:'wrap',marginBottom:16}}>
-              <Metric label="MEAN β_W" value={MC_PARAMS.mean} color={C.gold} />
-              <Metric label="90% CI" value={'['+MC_PARAMS.ci_lo+', '+MC_PARAMS.ci_hi+']'} color={C.muted} />
-              <Metric label="% HOLLOW WIN" value={MC_PARAMS.pct_hw+'%'} color={MC_PARAMS.pct_hw > 90 ? C.crimson : C.gold} />
+              <Metric label="MEAN β_W" value={MC_STATS.mean.toFixed(2)} sub={'Median: '+MC_STATS.median.toFixed(2)} color={C.gold} />
+              <Metric label="90% CI" value={'['+MC_STATS.ci_lo.toFixed(2)+', '+MC_STATS.ci_hi.toFixed(2)+']'} sub={'Range: '+MC_STATS.min.toFixed(2)+'–'+MC_STATS.max.toFixed(2)} color={C.muted} />
+              <Metric label="% HOLLOW WIN" value={MC_STATS.pct_hw.toFixed(1)+'%'} sub={'β_W > 1 in all draws'} color={MC_STATS.pct_hw > 95 ? C.crimson : C.gold} />
+              <Metric label="% β_W > 3" value={MC_STATS.pct_above_3.toFixed(1)+'%'} color={MC_STATS.pct_above_3 > 90 ? C.crimson : C.gold} />
+              <Metric label="% β_W > 5" value={MC_STATS.pct_above_5.toFixed(1)+'%'} color={MC_STATS.pct_above_5 > 50 ? '#D97706' : C.gold} />
             </div>
-            {MC_PARAMS.channels && MC_PARAMS.channels.length > 0 && (
-              <div style={{padding:16,background:C.panel,border:`1px solid ${C.border}`,borderRadius:4}}>
-                <div style={{fontFamily:C.mono,fontSize:12,color:C.gold,marginBottom:8}}>DISTRIBUTION PARAMETERS</div>
-                <table style={{width:'100%',borderCollapse:'collapse',fontFamily:C.mono,fontSize:13}}>
-                  <thead><tr style={{borderBottom:`1px solid ${C.border}`}}>
-                    <th style={{padding:'6px 10px',textAlign:'left',color:C.gold}}>CHANNEL</th>
-                    <th style={{padding:'6px 10px',textAlign:'left',color:C.gold}}>DISTRIBUTION</th>
-                    <th style={{padding:'6px 10px',textAlign:'right',color:C.gold}}>LOW</th>
-                    <th style={{padding:'6px 10px',textAlign:'right',color:C.gold}}>HIGH</th>
-                  </tr></thead>
-                  <tbody>
-                    {MC_PARAMS.channels.map((ch,i) => (
-                      <tr key={i} style={{borderBottom:`1px solid rgba(255,255,255,0.04)`}}>
-                        <td style={{padding:'6px 10px',color:C.text}}>{ch.name}</td>
-                        <td style={{padding:'6px 10px',color:C.muted}}>{ch.dist}</td>
-                        <td style={{padding:'6px 10px',color:C.muted,textAlign:'right'}}>{ch.lo}</td>
-                        <td style={{padding:'6px 10px',color:C.muted,textAlign:'right'}}>{ch.hi}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            )}
+            <SectionTitle>Channel Welfare Contributions</SectionTitle>
+            <table style={{width:'100%',borderCollapse:'collapse',fontFamily:C.mono,fontSize:13}}>
+              <thead><tr style={{borderBottom:`1px solid ${C.border}`}}>
+                <th style={{padding:'8px 12px',textAlign:'left',color:C.gold}}>CHANNEL</th>
+                <th style={{padding:'8px 12px',textAlign:'right',color:C.gold}}>MEAN $B</th>
+                <th style={{padding:'8px 12px',textAlign:'right',color:C.gold}}>P5</th>
+                <th style={{padding:'8px 12px',textAlign:'right',color:C.gold}}>P50</th>
+                <th style={{padding:'8px 12px',textAlign:'right',color:C.gold}}>P95</th>
+                <th style={{padding:'8px 12px',textAlign:'right',color:C.gold}}>SHARE</th>
+              </tr></thead>
+              <tbody>
+                {MC_CHANNELS.map((ch,i) => (
+                  <tr key={i} style={{borderBottom:`1px solid rgba(255,255,255,0.04)`,background:i%2===0?C.panel:C.bg}}>
+                    <td style={{padding:'8px 12px',color:C.text,fontFamily:C.serif,fontSize:14}}>{ch.name}</td>
+                    <td style={{padding:'8px 12px',color:C.gold,textAlign:'right',fontWeight:600}}>{ch.mean.toFixed(1)}</td>
+                    <td style={{padding:'8px 12px',color:C.muted,textAlign:'right'}}>{ch.p5.toFixed(1)}</td>
+                    <td style={{padding:'8px 12px',color:C.muted,textAlign:'right'}}>{ch.p50.toFixed(1)}</td>
+                    <td style={{padding:'8px 12px',color:C.muted,textAlign:'right'}}>{ch.p95.toFixed(1)}</td>
+                    <td style={{padding:'8px 12px',color:C.muted,textAlign:'right'}}>{(ch.share*100).toFixed(1)}%</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div style={{marginTop:16,padding:12,background:'rgba(245,158,11,0.06)',border:`1px solid rgba(245,158,11,0.15)`,borderRadius:4}}>
+              <div style={{fontFamily:C.mono,fontSize:11,color:C.muted}}>Total welfare cost: <span style={{color:C.gold}}>${MC_WELFARE.mean.toFixed(1)}B</span> (90% CI: ${MC_WELFARE.ci_lo.toFixed(1)}B – ${MC_WELFARE.ci_hi.toFixed(1)}B) · Source: sapm_monte_carlo.py (seed=42)</div>
+            </div>
+          </div>
+        )}
+
           </div>
         )}
 

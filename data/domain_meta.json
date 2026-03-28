@@ -1,0 +1,138 @@
+{
+  "key": "sapm-cement-calcination-floor",
+  "meta_fill": {
+    "pi": "$330B",
+    "psa": "-$1.68T",
+    "mu": "0.164",
+    "kappa": "1.35"
+  },
+  "psf": {
+    "pi_c": 85.0,
+    "pi_p": 330.0,
+    "w_c": 2014.0,
+    "kappa": 1.35
+  },
+  "monte_carlo": {
+    "mean": 6.12,
+    "ci_lo": 4.8,
+    "ci_hi": 8.9,
+    "pct_hw": 99.8,
+    "n_draws": 10000,
+    "channels": [
+      {
+        "name": "Calcination CO2 (process)",
+        "dist": "triangular",
+        "lo": 980,
+        "hi": 1480,
+        "mode": 1210
+      },
+      {
+        "name": "Combustion CO2 (energy)",
+        "dist": "triangular",
+        "lo": 420,
+        "hi": 680,
+        "mode": 540
+      },
+      {
+        "name": "Air quality mortality",
+        "dist": "triangular",
+        "lo": 120,
+        "hi": 280,
+        "mode": 190
+      },
+      {
+        "name": "Quarrying ecosystem destruction",
+        "dist": "uniform",
+        "lo": 40,
+        "hi": 120,
+        "mode": 75
+      },
+      {
+        "name": "NOx and particulate health",
+        "dist": "triangular",
+        "lo": 30,
+        "hi": 90,
+        "mode": 55
+      },
+      {
+        "name": "Governance failure",
+        "dist": "uniform",
+        "lo": 15,
+        "hi": 65,
+        "mode": 38
+      }
+    ]
+  },
+  "thresholds": [
+    {
+      "domain": "Clinker-to-cement ratio below 0.65 globally",
+      "year": 2030,
+      "confidence": "Medium",
+      "status": "Currently ~0.72; SCM substitution advancing in emerging markets",
+      "crossed": false
+    },
+    {
+      "domain": "First commercial CCS cement plant >1Mt/yr",
+      "year": 2028,
+      "confidence": "Medium",
+      "status": "Heidelberg Materials Brevik (Norway) targeting 2024 startup",
+      "crossed": false
+    },
+    {
+      "domain": "Calcium silicate cement >1% global clinker share",
+      "year": 2035,
+      "confidence": "Low",
+      "status": "Brimstone first plant ~103K-140K tonnes; 0.003% of global output",
+      "crossed": false
+    },
+    {
+      "domain": "Carbon price >$100/tCO2 in all major cement markets",
+      "year": 2032,
+      "confidence": "Low",
+      "status": "EU ETS ~\u20ac65; China ETS ~$10; U.S. no federal price",
+      "crossed": false
+    },
+    {
+      "domain": "DOE Brimstone grant reinstatement or equivalent",
+      "year": 2027,
+      "confidence": "Low",
+      "status": "Grant cancelled May 2025; administration reversal required",
+      "crossed": false
+    }
+  ],
+  "axioms": {
+    "type": "impossibility",
+    "items": [
+      {
+        "id": "A1",
+        "name": "Calcination Necessity",
+        "description": "Portland cement clinker requires CaCO3 (limestone) as its primary feedstock; no demonstrated alternative feedstock produces equivalent binding properties at commercial scale."
+      },
+      {
+        "id": "A2",
+        "name": "Stoichiometric Irreducibility",
+        "description": "CaCO3 \u2192 CaO + CO2 is a conservation-of-mass identity: 100 kg of limestone yields 56 kg of lime and 44 kg of CO2. No process chemistry can eliminate this CO2 while preserving the CaO product."
+      },
+      {
+        "id": "A3",
+        "name": "Institutional Lock-in",
+        "description": "The $330B global cement industry's infrastructure, supply chains, and capital stock are configured for limestone-based production; sovereign regulatory action cancelled the primary alternative funding stream (DOE Brimstone grant, May 2025)."
+      }
+    ]
+  },
+  "methods": {
+    "welfare_function": "W computed via Social Cost of Carbon ($190/tCO2) applied to 2.6 GtCO2/year process emissions plus 1.1 GtCO2 combustion emissions, plus VSL-weighted mortality from PM2.5 and NOx from cement kilns.",
+    "cooperative_baseline": "Cement production under full CCS for process emissions plus electrified kilns, retaining $85B in essential construction material value with net-zero CO2 impact.",
+    "key_sources": [
+      "IEA, Cement sector tracking (2024)",
+      "IPCC AR6 WG3, Industry chapter (2022)",
+      "Brimstone Energy technical specifications (2024)",
+      "Global Cement and Concrete Association, Getting the Numbers Right (2023)"
+    ],
+    "falsification": [
+      "F1: Demonstrate that calcium silicate cement (Brimstone process) achieves ASTM C150 compliance at >1% of global clinker output, establishing commercial-scale A1 escape.",
+      "F2: Show that CaCO3 calcination can produce binding CaO without releasing stoichiometric CO2 \u2014 i.e., refute A2 via novel process chemistry.",
+      "F3: Demonstrate that supplementary cementitious materials (fly ash, slag, calcined clay) can fully replace Portland clinker in all structural applications without strength or durability penalty."
+    ]
+  }
+}
