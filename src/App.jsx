@@ -284,7 +284,7 @@ export default function Cement7aCalcinationFloorDashboard() {
           <span style={{fontFamily:C.mono,fontSize:42,fontWeight:700,color:"#F59E0B"}}>𝒮_W = 0.74</span>
         </div>
         <div style={{fontFamily:C.mono,fontSize:11,color:C.muted,marginBottom:16}}>
-          S&P 500 long-run Sharpe ≈ 0.50 &nbsp;|&nbsp; Acceptable ≈ 0.30 &nbsp;|&nbsp; Poor ≈ 0.10
+          S&P 500 long-run Sharpe ≈ 0.40 &nbsp;|&nbsp; Acceptable ≥ 0.30 &nbsp;|&nbsp; Poor < 0.10
         </div>
         <div style={{fontFamily:C.serif,fontSize:14,color:"#F59E0B",lineHeight:1.7,fontStyle:"italic"}}>
           This sector generates meaningful private value relative to welfare cost — but remains in Hollow Win territory.
@@ -320,7 +320,7 @@ export default function Cement7aCalcinationFloorDashboard() {
                 <td style={{padding:"10px",color:C.text}}>S-W</td>
                 <td style={{padding:"10px",color:C.muted,fontFamily:C.serif}}>Private gain per dollar of system welfare cost. Higher is better — but in PST domains it is always low.</td>
                 <td style={{padding:"10px",color:C.muted,fontFamily:C.serif}}>Sharpe Ratio — return per unit of risk</td>
-                <td style={{padding:"10px",color:C.muted,fontFamily:C.serif}}>S&P 500 long-run Sharpe ≈ 0.50. A Sharpe of 0.10 is poor. VW Dieselgate: 𝒮_W = 0.12. LIBOR: 𝒮_W ≈ 0. ERCOT: 𝒮_W = 0.0005. These are welfare efficiency ratios of industries that GDP calls productive.</td>
+                <td style={{padding:"10px",color:C.muted,fontFamily:C.serif}}>S&P 500 long-run Sharpe ≈ 0.40. A Sharpe of 0.10 is poor. VW Dieselgate: 𝒮_W = 0.12. LIBOR: 𝒮_W ≈ 0. ERCOT: 𝒮_W = 0.0005. These are welfare efficiency ratios of industries that GDP calls productive.</td>
               </tr>
               <tr style={{borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
                 <td style={{padding:"10px",color:C.gold,fontWeight:600}}>T*</td>
