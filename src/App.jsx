@@ -60,7 +60,7 @@ const CROSS_DOMAIN = [
 const HIGHLIGHTS = [
         "The Calcination Floor: E_process(u) ≥ 0.51 t CO₂/t clinker for all u ∈ U — a mass-balance identity invariant to process design.",
         "Even at 100% renewable thermal energy, E(t) → 0.50–0.54 t CO₂/t clinker. The energy transition alone can eliminate at most 40% of current emissions.",
-        "β_W at full decarbonization (95% CCUS + full fuel switching) ≈ 1.35 — climate policy necessary but not sufficient.",
+        "βW at full decarbonization (95% CCUS + full fuel switching) ≈ 1.35 — climate policy necessary but not sufficient.",
         "Expiry condition: calcium silicate cement production exceeds 1% of global clinker output (~41 Mt/yr). As of 2026: ~0.003%.",
         "DOE's cancellation of Brimstone's $189M grant (May 2025) is a documented sovereign act reducing deployment of the primary A1-escaping technology.",
         "A3 confirmed: ICC astroturfing (ProPublica 2021), €5B EU ETS windfall, Brimstone DOE grant cancellation — institutional lock-in operating on three simultaneous tracks.",
@@ -323,7 +323,7 @@ export default function Cement7aCalcinationFloorDashboard() {
                   <th style={{padding:'8px 12px',textAlign:'left',color:C.gold}}>CAPM ANALOGUE</th>
                 </tr></thead>
                 <tbody>
-                  {[['β_W (System Beta)','β (Market Beta)'],['PSF (Private-Systemic Frontier)','SML (Security Market Line)'],[<>μ* (Shadow Price)</>,<>r<sub>f</sub> (Risk-Free Rate)</>],['Πˢᵃ (System-Adjusted Payoff)','α (Jensen\'s Alpha)'],['W (System Welfare)','No equivalent — structurally invisible'],[<>𝒮<sub>W</sub> (Welfare Efficiency)</>,<>Sharpe Ratio</>]].map(([s,c],i) => (
+                  {[[<>β<sub>W</sub> (System Beta)</>,<>β (Market Beta)</>],['PSF (Private-Systemic Frontier)','SML (Security Market Line)'],[<>μ* (Shadow Price)</>,<>r<sub>f</sub> (Risk-Free Rate)</>],['Πˢᵃ (System-Adjusted Payoff)','α (Jensen\'s Alpha)'],['W (System Welfare)','No equivalent — structurally invisible'],[<>𝒮<sub>W</sub> (Welfare Efficiency)</>,<>Sharpe Ratio</>]].map(([s,c],i) => (
                     <tr key={i} style={{borderBottom:`1px solid rgba(255,255,255,0.04)`}}>
                       <td style={{padding:'8px 12px',color:C.text}}>{s}</td>
                       <td style={{padding:'8px 12px',color:C.muted,fontFamily:C.serif}}>{c}</td>
@@ -480,7 +480,7 @@ export default function Cement7aCalcinationFloorDashboard() {
       </div>
 
       
-      {/* 𝒮_W WELFARE EFFICIENCY RATIO */}
+      {/* 𝒮W WELFARE EFFICIENCY RATIO */}
       <div style={{padding:"24px",background:C.panel,border:"2px solid #F59E0B40",borderRadius:4,margin:"24px 0"}}>
         <div style={{fontFamily:C.mono,fontSize:12,color:"#F59E0B",letterSpacing:2,marginBottom:16}}>WELFARE EFFICIENCY RATIO</div>
         <div style={{display:"flex",alignItems:"baseline",gap:12,marginBottom:12}}>
